@@ -1,0 +1,43 @@
+// operators
+// variables
+// nesting
+// @mixin & @include // used as a function and call it back // also used same function many times
+// Parameters
+// Partials
+// Import   // used for add other files
+// underscore is needed to name a file but not important in import it
+@import "_var"; 
+@import "another"; 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header{
+    // to include the function inside in it
+    // Also used parameters
+    @include header(100vw);
+
+    // NESTING
+    p{
+        color: $color;
+        font-size: 30px;
+    }
+    h1{
+        color: $color;
+        // we can use operators them also
+        font-size: 30px + 20px;
+        // AGAIN NESTED
+
+        // to use it inside as hover or else use this " & " to denoted  
+        &:hover{
+            color: $white;
+        }
+        &::before{
+            content:"Mr. " ;
+        }
+    }
+   
+}

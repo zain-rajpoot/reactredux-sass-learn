@@ -1,0 +1,11 @@
+// Also used parameters
+@mixin header($para) {
+    width:$para;
+    height: 100vh;
+    place-items:center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // variables use
+    background-color: $bg-color;
+}
